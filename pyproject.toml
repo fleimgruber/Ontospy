@@ -1,0 +1,31 @@
+[project]
+name = "ontospy"
+version = "2.2.0"
+description = "Add your description here"
+authors = [ { name = "Michele Pasin", email = "michele.pasin@gmail.com" } ]
+maintainers = [ { name = "Michele Pasin", email = "michele.pasin@gmail.com" } ,
+                { name = "Fabio Leimgruber", email = "fabio.leimgruber@posteo.eu" }]
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "click>=8.3.1",
+    "html5lib>=1.1",
+    "rdflib>=7.4.0",
+    "sparqlwrapper>=2.0.0",
+    "requests>=2.32.5",
+    "jinja2>=3.1.6",
+    "jinja2-time>=0.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+    "pytest-cov>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --ignore=ontospy/extras"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
