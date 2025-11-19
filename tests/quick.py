@@ -9,9 +9,8 @@ Test Quick: use this file to quickly run scripts/tests which will then be integr
 
 import click 
 
-from .. import *
-from ..core import *
-from ..core.utils import *
+from ontospy.core.utils import printDebug
+from ontospy.VERSION import VERSION
 
 
 from .context import TEST_RDF_FOLDER

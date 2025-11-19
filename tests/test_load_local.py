@@ -14,9 +14,9 @@ from __future__ import print_function
 import unittest, os
 import time
 
-from .. import *
-from .. core import *
-from .. core.utils import *
+from ontospy import Ontospy
+from ontospy.core.utils import printDebug
+from ontospy.VERSION import VERSION
 
 from .context import TEST_RDF_FOLDER
 

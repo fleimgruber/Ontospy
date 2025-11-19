@@ -11,12 +11,13 @@ Run like this:
 
 from __future__ import print_function
 
-import unittest, os, sys
+import unittest
 import time
 
-from .. import *
-from ..core import *
-from ..core.utils import *
+from ontospy.core import BOOTSTRAP_ONTOLOGIES
+from ontospy.core.ontospy import Ontospy
+from ontospy.core.utils import printDebug
+from ontospy.VERSION import VERSION
 
 
 # sanity check

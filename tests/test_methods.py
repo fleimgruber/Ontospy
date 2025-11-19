@@ -12,11 +12,11 @@ $ python -m ontospy.tests.test_methods
 from __future__ import print_function
 import time
 
-import unittest, os, sys
-from .. import *
-from ..core import *
-from ..core.utils import *
-
+import unittest
+import ontospy
+from ontospy import Ontospy
+from ontospy.core.utils import printDebug
+from ontospy.VERSION import VERSION
 
 
 from .context import TEST_RDF_FOLDER

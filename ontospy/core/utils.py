@@ -243,8 +243,8 @@ def pprinttable(rows):
     >>> pprinttable([data,data])
     first | second | third
     ------+--------+------
-        1 |		 2 |	 3
-        1 |		 2 |	 3
+        1 |      2 |     3
+        1 |      2 |     3
 
     """
     if len(rows) > 1:
@@ -891,8 +891,8 @@ def slugify(value):
     """
     import unicodedata, re
     value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    value = unicode(re.sub('[^\w\s-]', '', value.decode()).strip().lower())
-    value = re.sub('[-\s]+', '-', value)
+    value = unicode(re.sub(r'[^\w\s-]', '', value.decode()).strip().lower())
+    value = re.sub(r'[-\s]+', '-', value)
     return value
 
 

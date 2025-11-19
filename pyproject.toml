@@ -17,6 +17,9 @@ dependencies = [
     "jinja2-time>=0.2.0",
 ]
 
+[project.scripts]
+ontospy = "ontospy.cli:main_cli"
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.1",

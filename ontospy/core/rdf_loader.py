@@ -6,6 +6,7 @@ Copyright (c)  __Michele Pasin__ <http://www.michelepasin.org>. All rights reser
 
 """
 
+import io
 import os
 import urllib.request as urllib2
 import click
@@ -179,7 +180,7 @@ class RDFLoader(object):
             self.loading_failed(self.rdf_format_opts)
             self.sources_invalid += ["Data: '%s ...'" % data[:10]]
 
-    def load_file(file_obj):
+    def load_file(self, file_obj):
         """
         The type of open file objects such as sys.stdout; alias of the built-in file.
         @TODO: when is this used?
@@ -187,7 +188,7 @@ class RDFLoader(object):
         if self.verbose: printDebug("----------")
         if self.verbose: printDebug("Reading: <%s> ...'" % file_obj.name)
 
-        if type(file_obj) == file:
+        if isinstance(file_obj, io.IOBase):
             self.rdflib_graph = self.rdflib_graph + file_obj
             self.sources_valid += [file_obj.NAME]
         else:
