@@ -131,7 +131,7 @@ class RDFLoader(object):
                         printDebug(
                             "Detected JSONLD - loading data into rdflib.ConjunctiveGraph()",
                             fg='green')
-                    temp_graph = rdflib.ConjunctiveGraph()
+                    temp_graph = rdflib.Dataset()
                 else:
                     temp_graph = rdflib.Graph()
                 temp_graph.parse(uri, format=f)

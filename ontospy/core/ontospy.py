@@ -185,7 +185,7 @@ class Ontospy(object):
 		try:
 			# graph = rdflib.Graph('SPARQLStore')
 			# graph = rdflib.ConjunctiveGraph('SPARQLStore')
-			graph = rdflib.ConjunctiveGraph('SPARQLUpdateStore')
+			graph = rdflib.Dataset('SPARQLUpdateStore')
 
 			if credentials and type(credentials) == tuple:
 				# https://github.com/RDFLib/rdflib/issues/343
